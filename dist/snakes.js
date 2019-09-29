@@ -1,33 +1,21 @@
 "use strict";
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+class Matrix {
+  matrixGenerator(rows, cols) {
+    return [...new Array(rows)].map(row => [...new Array(cols)].map(col => 0));
+  }
 
-function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+  renderMatrix(snake) {}
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+}
 
-var Snakes = function () {
-    function Snakes() {
-        _classCallCheck(this, Snakes);
+class Snakes extends Matrix {
+  constructor() {
+    super();
+    console.log(this.matrixGenerator(10, 10));
+    console.log('test');
+  }
 
-        console.log(this.matrixGenerator(10, 10));
-    }
+}
 
-    _createClass(Snakes, [{
-        key: "matrixGenerator",
-        value: function matrixGenerator(rows, cols) {
-            return [].concat(_toConsumableArray(new Array(rows))).map(function (row) {
-                return [].concat(_toConsumableArray(new Array(cols))).map(function (col) {
-                    return 0;
-                });
-            });
-        }
-    }, {
-        key: "renderMatrix",
-        value: function renderMatrix(snake) {}
-    }]);
-
-    return Snakes;
-}();
-
-var game = new Snakes();
+const game = new Snakes();

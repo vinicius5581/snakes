@@ -1,7 +1,7 @@
-'use strict';
+"use strict";
 
-var _snakes = require('./snakes');
-
-var _snakes2 = _interopRequireDefault(_snakes);
+var _snakes = _interopRequireDefault(require("./snakes"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+const game = new _snakes.default();
